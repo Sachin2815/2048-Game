@@ -40,16 +40,16 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 ### 4️⃣ **Download 2048 Game Source Code** 🎮
 ```dockerfile
-RUN curl -o /var/www/html/master.zip -L https://github.com/gabrielecirulli/2048/archive/refs/heads/master.zip
+RUN curl -o /var/www/html/main.zip -L https://github.com/Sachin2815/2048-Game/archive/refs/heads/main.zip
 ```
 - Downloads the **2048 game** source code from GitHub.
-- Saves it as `master.zip` inside `/var/www/html/`.
+- Saves it as `main.zip` inside `/var/www/html/`.
 
 ### 5️⃣ **Unzip and Organize Files** 📂
 ```dockerfile
-RUN cd /var/www/html/ && unzip master.zip && mv 2048-master/* . && rm -rf 2048-master master.zip
+RUN cd /var/www/html && unzip main.zip && mv 2048-Game-main/* . && rm -rf 2048-Game-main main.zip
 ```
-- Extracts `master.zip` into `/var/www/html/`.
+- Extracts `main.zip` into `/var/www/html/`.
 - Moves game files to the correct directory.
 - Cleans up unnecessary files.
 
